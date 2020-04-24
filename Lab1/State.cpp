@@ -1,13 +1,11 @@
 #include "pch.h"
 #include "State.h"
 
-State::State(int N)
-{
+State::State(int N) {
 	isVisited.resize(N, false);
 }
 
-bool State::isEnd(int** A, int N)
-{
+bool State::isEnd(int** A, int N) {
 	if (SequenceWidth.size() == N)
 		return A[SequenceWidth.front()][SequenceWidth.back()] && A[SequenceWidth.back()][SequenceWidth.front()];
 	else return false;
